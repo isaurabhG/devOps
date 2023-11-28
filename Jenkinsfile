@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("code-pull"){
             steps{
-                git 'https://github.com/shashirajraja/Train-Ticket-Reservation-System.git'
+                git 'https://github.com/isaurabhG/studentapp.git'
             }
         } 
         stage("build"){
