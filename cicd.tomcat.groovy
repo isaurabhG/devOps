@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("code-pull"){
             steps{
-                git 'https://github.com/isaurabhG/studentapp.git'
+                git 'https://github.com/isaurabhG/claim-microservice.git'
             }
         } 
         stage("build"){
@@ -14,7 +14,7 @@ pipeline{
         }
         stage("deploy"){
             steps{
-               deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://54.64.70.120:8080/')], contextPath: '/', war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://35.73.241.192:8080')], contextPath: '/', war: '**/*.war'
             }    
         }
     }
